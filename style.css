@@ -1,0 +1,1476 @@
+/* base style */
+:root {
+  --background-color: rgba(0, 0, 0, 0.6);
+  --hover-background-color: #2c2a35;
+  --button-background: #494752;
+  --form-submit: #006599;
+}
+
+.body {
+  background-color: black;
+}
+.copyright {
+  color: white;
+  background-color: var(--background-color);
+  padding: 1em;
+  opacity: 0.6;
+  text-align: center;
+}
+
+.structure {
+  background-image: url(img/pop-bg.jpg);
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.inside-structure {
+  display: flex;
+  flex-direction: column;
+}
+
+.web-details {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  color: white;
+  width: 95%;
+}
+
+.actions {
+  margin: 1em;
+  width: 95%;
+}
+
+.action {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  width: 100%;
+  cursor: pointer;
+}
+
+.all-action {
+  border: 1px solid white;
+  width: 30%;
+  padding: 2em;
+  align-self: end;
+  display: flex;
+  gap: 0.8em;
+  flex-direction: column;
+
+  &:hover {
+    background-color: var(--hover-background-color);
+  }
+}
+
+.action-container {
+  align-self: center;
+  margin-top: 1em;
+}
+
+.action-icon {
+  font-size: 2em;
+}
+
+.action-heading {
+  font-size: 1.3em;
+  align-self: center;
+}
+
+.web-heading {
+  font-size: 2.5em;
+  font-family: sans-serif;
+  align-self: center;
+}
+
+.line-1 {
+  width: 16em;
+  height: 0.2em;
+  align-self: center;
+  background-color: white;
+}
+
+.line-2 {
+  width: 7em;
+  height: 1em;
+  background-color: white;
+}
+
+.figure {
+  display: flex;
+  align-self: center;
+}
+
+.web-details > div {
+  margin-bottom: 1em;
+}
+
+.web-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-left: 0em;
+  align-items: flex-end;
+}
+
+.web-info {
+  font-size: 1.2em;
+}
+
+.modal {
+  background-color: var(--hover-background-color);
+  position: absolute;
+  top: 0;
+  display: none;
+  width: 100%;
+}
+
+.modal-visible {
+  display: block;
+  animation: modal-animation 0.4s linear;
+}
+
+@keyframes modal-animation {
+  0% {
+    transform: scale(0.5);
+  }
+
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.welcome-modal {
+  animation: data 0.6s linear;
+  display: none;
+  flex-direction: column;
+  gap: 2em;
+  width: 50%;
+}
+
+.team-modal {
+  animation: data 0.6s linear;
+  display: none;
+  width: 50%;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.work-modal {
+  animation: data 0.6s linear;
+  display: none;
+  flex-direction: column;
+  gap: 2em;
+  color: white;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  width: 95%;
+}
+.contact-modal {
+  display: none;
+  width: 95%;
+}
+.modal-data-visible {
+  display: flex !important;
+}
+
+.team-part1 {
+  color: white;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.team-data-heading {
+  font-size: 2em;
+}
+
+.read-more {
+  background-color: var(--button-background);
+  width: fit-content;
+  padding: 0.5em;
+  margin-top: -1.2em;
+
+  &:hover {
+    background-color: white;
+    color: var(--hover-background-color);
+  }
+}
+
+.work-data-heading {
+  font-size: 2em;
+}
+
+.work-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 2em;
+}
+
+.carousel-data {
+  box-sizing: border-box;
+}
+
+.carousel-data img {
+  width: fit-content;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+.contact-modal {
+  animation: data 0.6s linear;
+  display: none;
+  flex-direction: column;
+  gap: 1em;
+  color: white;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+textarea {
+  margin-top: 2em;
+  width: 80%;
+  height: 10em;
+  outline: none;
+}
+
+.welcome-img{
+  width: 16em;
+}
+
+input {
+  width: auto;
+  outline: none;
+}
+
+input,
+textarea {
+  background-color: var(--button-background);
+  color: white;
+  padding: 1em;
+  border: none;
+  decoration: none;
+}
+
+.form-fields {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+}
+
+.contact-data-heading {
+  font-size: 2em;
+}
+
+.send {
+  margin: 0em 0.1em;
+  color: white;
+  background-color: var(--form-submit);
+  font-size: 1.2em;
+  width: fit-content;
+  padding: 0.5em 1.2em;
+}
+
+@media (min-width: 600px) {
+  .carousel-item {
+    min-width: 50%;
+  }
+}
+
+@media (min-width: 900px) {
+  .carousel-item {
+    min-width: 33.33%;
+  }
+}
+
+@keyframes data {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.welcome-part1 {
+  display: flex;
+  color: white;
+  flex-direction: column;
+}
+
+.welcome-part2 {
+  display: flex;
+  color: white;
+  flex-direction: column-reverse;
+}
+
+.close {
+  margin-left: 6em;
+  font-size: 2em;
+  color: white;
+  padding: 0.5em;
+}
+
+.modal-hidden {
+  animation: modal-reverse-animation 0.4s linear;
+}
+
+@keyframes modal-reverse-animation {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+    display: none;
+  }
+}
+
+.welcome-info1 {
+  margin: 1em;
+  line-height: 1.5em;
+  font-size: 1.2em;
+}
+
+.welcome-info2 {
+  margin: 1em;
+  line-height: 1.5em;
+  font-size: 1.2em;
+}
+
+
+@media (min-width: 425px) {
+
+  .welcome-img{
+    width: auto;
+  }
+
+  .body {
+    background-color: black;
+  }
+  .copyright {
+    color: white;
+    background-color: var(--background-color);
+    padding: 1em;
+    opacity: 0.6;
+    text-align: center;
+  }
+
+  .structure {
+    background-image: url(img/pop-bg.jpg);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .inside-structure {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .web-details {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    color: white;
+    width: 95%;
+  }
+
+  .actions {
+    margin: 1em;
+    width: 95%;
+  }
+
+  .action {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .all-action {
+    border: 1px solid white;
+    width: 30%;
+    padding: 2em;
+    align-self: end;
+    display: flex;
+    gap: 0.8em;
+    flex-direction: column;
+
+    &:hover {
+      background-color: var(--hover-background-color);
+    }
+  }
+
+  .action-container {
+    align-self: center;
+    margin-top: 1em;
+  }
+
+  .action-icon {
+    font-size: 2em;
+  }
+
+  .action-heading {
+    font-size: 1.3em;
+    align-self: center;
+  }
+
+  .web-heading {
+    font-size: 2.5em;
+    font-family: sans-serif;
+    align-self: center;
+  }
+
+  .line-1 {
+    width: 16em;
+    height: 0.2em;
+    align-self: center;
+    background-color: white;
+  }
+
+  .line-2 {
+    width: 7em;
+    height: 1em;
+    background-color: white;
+  }
+
+  .figure {
+    display: flex;
+    align-self: center;
+  }
+
+  .web-details > div {
+    margin-bottom: 1em;
+  }
+
+  .web-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-left: 0em;
+    align-items: flex-end;
+  }
+
+  .web-info {
+    font-size: 1.2em;
+  }
+
+  .modal {
+    background-color: var(--hover-background-color);
+    position: absolute;
+    top: 0;
+    display: none;
+    width: 100%;
+  }
+
+  .modal-visible {
+    display: block;
+    animation: modal-animation 0.4s linear;
+  }
+
+  @keyframes modal-animation {
+    0% {
+      transform: scale(0.5);
+    }
+
+    50% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .welcome-modal {
+    animation: data 0.6s linear;
+    display: none;
+    flex-direction: column;
+    gap: 2em;
+    width: 50%;
+  }
+
+  .team-modal {
+    animation: data 0.6s linear;
+    display: none;
+    width: 50%;
+    flex-direction: row;
+    gap: 0em;
+  }
+
+  .work-modal {
+    animation: data 0.6s linear;
+    display: none;
+    flex-direction: column;
+    gap: 2em;
+    color: white;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    width: 95%;
+  }
+  .contact-modal {
+    display: none;
+    width: 95%;
+  }
+  .modal-data-visible {
+    display: flex !important;
+  }
+
+  .team-part1 {
+    color: white;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .team-data-heading {
+    font-size: 2em;
+  }
+
+  .read-more {
+    background-color: var(--button-background);
+    width: fit-content;
+    padding: 0.5em;
+    margin-top: -1.2em;
+
+    &:hover {
+      background-color: white;
+      color: var(--hover-background-color);
+    }
+  }
+
+  .work-data-heading {
+    font-size: 2em;
+  }
+
+  .work-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+  }
+
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 2em;
+  }
+
+  .carousel-data {
+    box-sizing: border-box;
+  }
+
+  .carousel-data img {
+    width: fit-content;
+  }
+
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .carousel-control.prev {
+    left: 10px;
+  }
+
+  .carousel-control.next {
+    right: 10px;
+  }
+
+  .contact-modal {
+    animation: data 0.6s linear;
+    display: none;
+    flex-direction: column;
+    gap: 1em;
+    color: white;
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+
+  textarea {
+    margin-top: 2em;
+    width: 80%;
+    height: 10em;
+    outline: none;
+  }
+
+  input {
+    width: 30em;
+    outline: none;
+  }
+
+  input,
+  textarea {
+    background-color: var(--button-background);
+    color: white;
+    padding: 1em;
+    border: none;
+    decoration: none;
+  }
+
+  .form-fields {
+    display: flex;
+    gap: 1em;
+    flex-direction: row;
+  }
+
+  .contact-data-heading {
+    font-size: 2em;
+  }
+
+  .send {
+    margin: 0em 0.1em;
+    color: white;
+    background-color: var(--form-submit);
+    font-size: 1.2em;
+    width: fit-content;
+    padding: 0.5em 1.2em;
+  }
+
+  @media (min-width: 600px) {
+    .carousel-item {
+      min-width: 50%;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .carousel-item {
+      min-width: 33.33%;
+    }
+  }
+
+  @keyframes data {
+    from {
+      transform: translateY(100px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  .welcome-part1 {
+    display: flex;
+    color: white;
+    flex-direction: column;
+  }
+
+  .welcome-part2 {
+    display: flex;
+    color: white;
+    flex-direction: column-reverse;
+  }
+
+  .close {
+    margin-left: 10em;
+    font-size: 2em;
+    color: white;
+    padding: 0.5em;
+}
+
+  .modal-hidden {
+    animation: modal-reverse-animation 0.4s linear;
+  }
+
+  @keyframes modal-reverse-animation {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(0);
+      display: none;
+    }
+  }
+
+  .welcome-info1 {
+    margin: 1em;
+    line-height: 1.5em;
+    font-size: 1.2em;
+  }
+
+  .welcome-info2 {
+    margin: 1em;
+    line-height: 1.5em;
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 884px) {
+
+  .welcome-img{
+    width: auto;
+  }
+
+  .body {
+    background-color: black;
+  }
+  .copyright {
+    color: white;
+    background-color: var(--background-color);
+    padding: 1em;
+    opacity: 0.6;
+    text-align: center;
+  }
+
+  .structure {
+    background-image: url(img/pop-bg.jpg);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .inside-structure {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .web-details {
+    display: flex;
+    flex-direction: column;
+    margin: 14em 1em 10em 1em;
+    color: white;
+    width: 50%;
+  }
+
+  .actions {
+    margin: 10em 1em;
+    width: 95%;
+  }
+
+  .action {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .all-action {
+    border: 1px solid white;
+    width: 30%;
+    padding: 2em;
+    align-self: end;
+    display: flex;
+    gap: 0.8em;
+    flex-direction: column;
+
+    &:hover {
+      background-color: var(--hover-background-color);
+    }
+  }
+
+  .action-container {
+    align-self: center;
+    margin-top: 1em;
+  }
+
+  .action-icon {
+    font-size: 2em;
+  }
+
+  .action-heading {
+    font-size: 1.3em;
+    align-self: center;
+  }
+
+  .web-heading {
+    font-size: 2.5em;
+    font-family: sans-serif;
+  }
+
+  .line-1 {
+    width: 16em;
+    height: 0.2em;
+    align-self: center;
+    background-color: white;
+  }
+
+  .line-2 {
+    width: 7em;
+    height: 1em;
+    background-color: white;
+  }
+
+  .figure {
+    display: flex;
+  }
+
+  .web-details > div {
+    margin-bottom: 1em;
+  }
+
+  .web-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-left: 0em;
+    align-items: flex-end;
+  }
+
+  .web-info {
+    font-size: 1.2em;
+  }
+
+  .modal {
+    background-color: var(--hover-background-color);
+    position: absolute;
+    padding: 2em;
+    top: 0;
+    margin: 3em;
+    display: none;
+    max-width: 50em;
+    max-height: 32em;
+  }
+
+  .modal-visible {
+    display: block;
+    animation: modal-animation 0.4s linear;
+  }
+
+  @keyframes modal-animation {
+    0% {
+      transform: scale(0.5);
+    }
+
+    50% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .welcome-modal {
+    animation: data 0.6s linear;
+    display: none;
+    flex-direction: column;
+    gap: 2em;
+    width: auto;
+  }
+
+  .team-modal {
+    animation: data 0.6s linear;
+    display: none;
+    flex-direction: row;
+    width: auto;
+    gap: 0em;
+  }
+
+  .work-modal {
+    animation: data 0.6s linear;
+    display: none;
+    flex-direction: column;
+    gap: 2em;
+    color: white;
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+  .contact-modal {
+    display: none;
+  }
+  .modal-data-visible {
+    display: flex !important;
+  }
+
+  .team-part1 {
+    color: white;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .team-data-heading {
+    font-size: 2em;
+  }
+
+  .read-more {
+    background-color: var(--button-background);
+    width: fit-content;
+    padding: 0.5em;
+    margin-top: -1.2em;
+
+    &:hover {
+      background-color: white;
+      color: var(--hover-background-color);
+    }
+  }
+
+  .work-data-heading {
+    font-size: 2em;
+  }
+
+  .work-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+  }
+
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 2em;
+  }
+
+  .carousel-data {
+    box-sizing: border-box;
+  }
+
+  .carousel-data img {
+    width: fit-content;
+  }
+
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .carousel-control.prev {
+    left: 10px;
+  }
+
+  .carousel-control.next {
+    right: 10px;
+  }
+
+  .contact-modal {
+    animation: data 0.6s linear;
+    display: none;
+    flex-direction: column;
+    gap: 1em;
+    color: white;
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+
+  textarea {
+    margin-top: 2em;
+    width: 80%;
+    height: 10em;
+    outline: none;
+  }
+
+  input {
+    width: 30em;
+    outline: none;
+  }
+
+  input,
+  textarea {
+    background-color: var(--button-background);
+    color: white;
+    padding: 1em;
+    border: none;
+    decoration: none;
+  }
+
+  .form-fields {
+    display: flex;
+    gap: 1em;
+    flex-direction: row;
+  }
+
+  .contact-data-heading {
+    font-size: 2em;
+  }
+
+  .send {
+    margin: 0em 0.1em;
+    color: white;
+    background-color: var(--form-submit);
+    font-size: 1.2em;
+    width: fit-content;
+    padding: 0.5em 1.2em;
+  }
+
+  @media (min-width: 600px) {
+    .carousel-item {
+      min-width: 50%;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .carousel-item {
+      min-width: 33.33%;
+    }
+  }
+
+  @keyframes data {
+    from {
+      transform: translateY(100px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  .welcome-part1 {
+    display: flex;
+    flex-direction: row;
+    color: white;
+  }
+
+  .welcome-part2 {
+    display: flex;
+    flex-direction: row;
+    color: white;
+  }
+
+  .close {
+    margin-left: 22em;
+    font-size: 2em;
+    color: white;
+    padding: 0.5em;
+  }
+
+  .modal-hidden {
+    animation: modal-reverse-animation 0.4s linear;
+  }
+
+  @keyframes modal-reverse-animation {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(0);
+      display: none;
+    }
+  }
+
+  .welcome-info1 {
+    margin: 0em 2em;
+    padding: 0em 2em;
+    line-height: 1.5em;
+    font-size: 1.2em;
+  }
+
+  .welcome-info2 {
+    margin-right: 2em;
+    line-height: 1.5em;
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 1122px) {
+
+  .welcome-img{
+    width: auto;
+  }
+
+  .body {
+    background-color: black;
+  }
+  .copyright {
+    color: white;
+    background-color: var(--background-color);
+    padding: 1em;
+    opacity: 0.6;
+    text-align: center;
+  }
+
+  .structure {
+    background-image: url(img/pop-bg.jpg);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .inside-structure {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .web-details {
+    display: flex;
+    flex-direction: column;
+    margin: 14em 1em 10em 10em;
+    color: white;
+    width: 50%;
+  }
+
+  .actions {
+    margin: 10em 6em 10em 0em;
+    width: 50%;
+  }
+
+  .action {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .all-action {
+    border: 1px solid white;
+    width: 30%;
+    padding: 2em;
+    align-self: end;
+    display: flex;
+    gap: 0.8em;
+    flex-direction: column;
+
+    &:hover {
+      background-color: var(--hover-background-color);
+    }
+  }
+
+  .action-container {
+    align-self: center;
+    margin-top: 1em;
+  }
+
+  .action-icon {
+    font-size: 2em;
+  }
+
+  .action-heading {
+    font-size: 1.3em;
+    align-self: center;
+  }
+
+  .web-heading {
+    font-size: 2.5em;
+    font-family: sans-serif;
+  }
+
+  .line-1 {
+    width: 16em;
+    height: 0.2em;
+    align-self: center;
+    background-color: white;
+  }
+
+  .line-2 {
+    width: 7em;
+    height: 1em;
+    background-color: white;
+  }
+
+  .figure {
+    display: flex;
+  }
+
+  .web-details > div {
+    margin-bottom: 1em;
+  }
+
+  .web-container {
+    width: 20em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-left: 9em;
+    align-items: flex-end;
+  }
+
+  .web-info {
+    font-size: 1.2em;
+  }
+
+  .modal {
+    background-color: var(--hover-background-color);
+    position: absolute;
+    padding: 2em;
+    top: 0;
+    margin: 6em 10em;
+    display: none;
+    max-width: 60em;
+    max-height: 32em;
+  }
+
+  .modal-visible {
+    display: block;
+    animation: modal-animation 0.4s linear;
+  }
+
+  @keyframes modal-animation {
+    0% {
+      transform: scale(0.5);
+    }
+
+    50% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .welcome-modal {
+    animation: data 0.6s linear;
+    display: none;
+    flex-direction: column;
+    gap: 2em;
+    width: auto;
+  }
+
+  .team-modal {
+    animation: data 0.6s linear;
+    display: none;
+    width: auto;
+    flex-direction: row;
+    gap: 0em;
+  }
+
+  .work-modal {
+    animation: data 0.6s linear;
+    display: none;
+    flex-direction: column;
+    gap: 2em;
+    color: white;
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+  .contact-modal {
+    display: none;
+  }
+  .modal-data-visible {
+    display: flex !important;
+  }
+
+  .team-part1 {
+    color: white;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .team-data-heading {
+    font-size: 2em;
+  }
+
+  .read-more {
+    background-color: var(--button-background);
+    width: fit-content;
+    padding: 1em;
+
+    &:hover {
+      background-color: white;
+      color: var(--hover-background-color);
+    }
+  }
+
+  .work-data-heading {
+    font-size: 2em;
+  }
+
+  .work-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+  }
+
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 2em;
+  }
+
+  .carousel-data {
+    box-sizing: border-box;
+  }
+
+  .carousel-data img {
+    width: fit-content;
+  }
+
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .carousel-control.prev {
+    left: 10px;
+  }
+
+  .carousel-control.next {
+    right: 10px;
+  }
+
+  .contact-modal {
+    animation: data 0.6s linear;
+    display: none;
+    flex-direction: column;
+    gap: 1em;
+    color: white;
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+
+  textarea {
+    margin-top: 2em;
+    width: 80%;
+    height: 10em;
+    outline: none;
+  }
+
+  input {
+    width: 30em;
+    outline: none;
+  }
+
+  input,
+  textarea {
+    background-color: var(--button-background);
+    color: white;
+    padding: 1em;
+    border: none;
+    decoration: none;
+  }
+
+  .form-fields {
+    display: flex;
+    gap: 1em;
+    flex-direction: row;
+  }
+
+  .contact-data-heading {
+    font-size: 2em;
+  }
+
+  .send {
+    margin: 0em 0.1em;
+    color: white;
+    background-color: var(--form-submit);
+    font-size: 1.2em;
+    width: fit-content;
+    padding: 0.5em 1.2em;
+  }
+
+  @media (min-width: 600px) {
+    .carousel-item {
+      min-width: 50%;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .carousel-item {
+      min-width: 33.33%;
+    }
+  }
+
+  @keyframes data {
+    from {
+      transform: translateY(100px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  .welcome-part1 {
+    display: flex;
+    flex-direction: row;
+    color: white;
+  }
+
+  .welcome-part2 {
+    display: flex;
+    flex-direction: row;
+    color: white;
+  }
+
+  .close {
+    margin-left: 27em;
+    font-size: 2em;
+    color: white;
+    padding: 0.5em;
+  }
+
+  .modal-hidden {
+    animation: modal-reverse-animation 0.4s linear;
+  }
+
+  @keyframes modal-reverse-animation {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(0);
+      display: none;
+    }
+  }
+
+  .welcome-info1 {
+    margin-left: 2em;
+    padding: 0em 2em;
+    line-height: 1.5em;
+    font-size: 1.2em;
+  }
+
+  .welcome-info2 {
+    margin-right: 2em;
+    line-height: 1.5em;
+    font-size: 1.2em;
+  }
+}
